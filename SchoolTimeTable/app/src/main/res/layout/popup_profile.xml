@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/ShapeAppearance.SchoolTimeTable.SmallComponent"
+    android:id="@+id/profile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/class_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:text="Class:"
+        android:textSize="20dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/classEdit"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/class_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Code:"
+        android:textSize="20dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/codeEdit"
+        app:layout_constraintStart_toStartOf="@+id/class_name" />
+
+    <TextView
+        android:id="@+id/classroom_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Room:"
+        android:textSize="20dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/room_num"
+        app:layout_constraintStart_toStartOf="@+id/class_name" />
+
+    <TextView
+        android:id="@+id/teacher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Teacher:"
+        android:textSize="20dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/teacherEdit"
+        app:layout_constraintStart_toStartOf="@+id/classroom_num" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time:"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/times"
+        app:layout_constraintStart_toStartOf="@+id/class_name"
+        app:layout_constraintTop_toTopOf="@+id/times" />
+
+    <TextView
+        android:id="@+id/duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Duration:"
+        android:textSize="20dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/fromText"
+        app:layout_constraintStart_toStartOf="@+id/class_name" />
+
+    <TextView
+        android:id="@+id/period"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Period:"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/periods"
+        app:layout_constraintStart_toStartOf="@+id/class_name"
+        app:layout_constraintTop_toTopOf="@+id/periods" />
+
+    <EditText
+        android:id="@+id/classEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="8"
+        android:layout_marginTop="5dp"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/class_name"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/codeEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="8"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/classEdit"
+        app:layout_constraintStart_toEndOf="@+id/class_num"
+        app:layout_constraintStart_toStartOf="@+id/classEdit"
+        app:layout_constraintTop_toBottomOf="@+id/classEdit" />
+
+    <EditText
+        android:id="@+id/room_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="8"
+        app:layout_constraintEnd_toEndOf="@+id/codeEdit"
+        app:layout_constraintStart_toStartOf="@id/codeEdit"
+        app:layout_constraintTop_toBottomOf="@+id/codeEdit" />
+
+    <EditText
+        android:id="@+id/teacherEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="8"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/room_num"
+        app:layout_constraintStart_toEndOf="@+id/teacher"
+        app:layout_constraintStart_toStartOf="@+id/room_num"
+        app:layout_constraintTop_toBottomOf="@+id/room_num" />
+
+    <LinearLayout
+        android:id="@+id/times"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/teacherEdit"
+        app:layout_constraintStart_toEndOf="@+id/time"
+        app:layout_constraintStart_toStartOf="@+id/teacherEdit"
+        app:layout_constraintTop_toBottomOf="@+id/teacherEdit">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="From:"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/timeFrom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="3"
+            android:inputType="number" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To:"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/timeTo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="3"
+            android:inputType="number" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/periods"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="@+id/times"
+        app:layout_constraintStart_toEndOf="@+id/period"
+        app:layout_constraintStart_toStartOf="@+id/times"
+        app:layout_constraintTop_toBottomOf="@+id/times">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <CheckBox
+                android:id="@+id/Mon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mon." />
+
+            <CheckBox
+                android:id="@+id/Tues"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tue." />
+
+            <CheckBox
+                android:id="@+id/Wed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wed." />
+
+            <CheckBox
+                android:id="@+id/Thur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thur." />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <CheckBox
+                android:id="@+id/Fri"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fri." />
+
+            <CheckBox
+                android:id="@+id/Sat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sat." />
+
+            <CheckBox
+                android:id="@+id/Sun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sun." />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/fromText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="From:"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/from"
+        app:layout_constraintStart_toEndOf="@+id/duration"
+        app:layout_constraintTop_toBottomOf="@+id/periods" />
+
+    <TextView
+        android:id="@+id/toText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="To:"
+        android:textColor="@color/black"
+        app:layout_constraintBaseline_toBaselineOf="@+id/to"
+        app:layout_constraintEnd_toStartOf="@+id/to" />
+
+    <EditText
+        android:id="@+id/from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="3"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/fromText"
+        app:layout_constraintTop_toBottomOf="@+id/periods" />
+
+    <EditText
+        android:id="@+id/to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="3"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/from"
+        app:layout_constraintTop_toBottomOf="@+id/periods" />
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Add"
+        app:layout_constraintEnd_toEndOf="@+id/to"
+        app:layout_constraintStart_toStartOf="@+id/to"
+        app:layout_constraintTop_toBottomOf="@+id/to" />
+
+    <Button
+        android:id="@+id/delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/to"
+        app:layout_constraintStart_toEndOf="@+id/toText"
+        app:layout_constraintTop_toBottomOf="@+id/to" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

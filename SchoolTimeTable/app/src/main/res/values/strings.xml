@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">SchoolTimeTable</string>
+    <string name="weeks">Weeks</string>
+    <string name="list">List</string>
+    <string name="grid">Grid</string>
+    <string name="content_description_list">ListView</string>
+    <string name="content_description_grid">GridView</string>
+    <string name="M">M</string>
+    <string name="A">A</string>
+    <string name="E">E</string>
+    <string name="Class">Class</string>
+    <string name="Teacher">Teacher</string>
+    <string name="Num">Z000</string>
+    <string name="time">Lesson 0 - 4</string>
+    <string name="duration">Week 1 - 20</string>
+</resources>
